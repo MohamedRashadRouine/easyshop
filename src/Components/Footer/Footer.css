@@ -1,0 +1,94 @@
+/* Simple Footer styles */
+.simple-footer {
+    background-color: #252525;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .column h3 {
+    color: #FF5F1F;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+  
+  .newsletter h3 {
+    color: #FF5F1F; /* Change the color to match your design */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter label {
+    margin-bottom: 5px; /* Adjust the spacing */
+    font-weight: bold;
+  }
+  
+  .newsletter input {
+    padding: 8px;
+    margin-bottom: 5px; /* Adjust the spacing */
+    border: 1px solid #FF5F1F;
+    border-radius: 4px;
+  }
+  
+  .newsletter button {
+    padding: 10px;
+    background-color: #FF5F1F;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .newsletter button:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .developers {
+    flex: 1;
+  }
+  
+  .developers h3 {
+    color: #FF5F1F;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .developer-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .developer-link:hover {
+    color: #FF5F1F;
+  }
+  
+  /* Adjust the styles based on your design preferences */
+  

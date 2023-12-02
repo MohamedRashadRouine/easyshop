@@ -1,0 +1,88 @@
+/* Navbar.css */
+
+.Navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FF5F1F;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Improved styling for logo */
+  .nav-logo img {
+    padding-left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  
+  /* Improved styling for menu */
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #fff; /* Set the default color for the menu items */
+  }
+  .nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #044b7a;
+  }
+  
+  .nav-menu li:hover {
+    color: #044b7a;
+  }
+  
+  /* Improved styling for login button and cart icon */
+  .nav-login-cart button {
+    cursor: pointer;
+    background-color: #005bd1;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    position: relative; /* Added position relative for absolute positioning of the count */
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-login-cart button:hover {
+    color: #044b7a;
+    background-color: #fff;
+  }
+  
+  .nav-login-cart button:active {
+    transform: scale(0.95);
+  }
+  
+  .nav-login-cart img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Styling for cart count */
+  .nav-login-cart .nav-cart-count {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    background-color: white;
+    color: #333;
+    padding-right: 2px;
+    padding-left: 2px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 144px;
+  }
+  

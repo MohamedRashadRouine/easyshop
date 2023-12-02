@@ -1,0 +1,35 @@
+@startuml
+!define CLASSURL https://www.plantuml.com/plantuml/svg/
+
+!define RECTANGLE class
+
+!define HEADER class
+
+!define ATTRIBUTE class
+
+!define METHOD class
+
+Home --> Products
+Home --> Blog
+Home --> Contact
+Home --> Register
+Home --> Login
+Products --> ViewProducts : View Products
+Products --> SearchProducts : Search Products
+Products --> ProductPages : View Details
+Blog --> BlogPosts : View Blog
+Contact --> ContactForm : Fill Form
+Register --> User : Submit Registration
+Login --> Register : Click Login
+Blog --> AddBlogPost : Add Post
+User --> Accounts : Login
+User --> Products : Login
+User --> Accounts : Visit Profile
+User --> Order : Place Order
+Admin --> Accounts : Login
+Admin --> Accounts : Manage Accounts
+Admin --> Products : Manage Products
+Admin --> BlogPosts : Manage Posts
+Order --> Checkout : Confirm Order
+Checkout --> Payment : Process Payment
+@enduml

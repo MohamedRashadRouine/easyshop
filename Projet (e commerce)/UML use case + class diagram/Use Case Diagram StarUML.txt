@@ -1,0 +1,46 @@
+@startuml
+
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define USERURL https://www.plantuml.com/plantuml/svg/
+!define ACTORURL https://www.plantuml.com/plantuml/svg/
+!define ICONSURL https://www.plantuml.com/plantuml/png/
+!define CLASSURL https://www.plantuml.com/plantuml/svg/
+
+left to right direction
+skinparam packageStyle rectangle
+
+actor V as "Visitor" #Gray
+actor U as "User" #DodgerBlue
+actor A as "Admin" #Orange
+
+rectangle ECommerceSystem {
+  usecase "Browse Blog" as UC1
+  usecase "Browse Products" as UC2
+  usecase "Register Account" as UC3
+  usecase "Sign In" as UC4
+  usecase "Post Blog" as UC5
+  usecase "Order Products" as UC6
+  usecase "Checkout" as UC7
+  usecase "Manage User Accounts" as UC8
+  usecase "Approve Blog Posts" as UC9
+  usecase "Manage Blog Content" as UC10
+  usecase "Manage Products" as UC11
+}
+
+V --> UC1
+V --> UC2
+V --> UC3
+
+U --> UC1
+U --> UC4
+U --> UC2
+U --> UC5
+U --> UC6
+U --> UC7
+
+A --> UC8
+A --> UC9
+A --> UC10
+A --> UC11
+
+@enduml

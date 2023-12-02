@@ -1,0 +1,122 @@
+Homepage:
+
+    Navigation Bar (Logo, Home, Products, Blog, Contact)
+    Language Selector (Dropdown for English, French, Arabic)
+    Featured Products Section
+    Featured Blog Posts Section
+    Call-to-Action Buttons (Register, Log In)
+
+User Account Dashboard:
+
+    User Profile Section (Name, Email, Order History)
+    Account Settings (Change Password, Update Profile)
+    Log Out Button
+
+Blog Section:
+
+    List of Blog Posts with Thumbnails and Descriptions
+    Add Post Button (Visible for Admin)
+    Pagination for Blog Posts
+
+Product Section:
+
+    Grid of Product Cards (Image, Description, Price)
+    Filter and Search Bar
+    Add to Cart Button (Visible for Users)
+    Manage Products Button (Visible for Admin)
+
+Product Details Page:
+
+    Large Product Image
+    Detailed Product Description
+    Add to Cart Button
+    Related Products Section
+
+Checkout Process:
+
+    Cart Summary (List of Products, Quantities, Prices)
+    Shipping Information Form
+    Payment Information (PayPal Integration)
+    Order Summary and Confirmation
+
+Contact Page:
+
+    Contact Form (Name, Email, Message)
+    Contact Details (Location, Phone, Email)
+
+Admin Dashboard:
+
+    Admin Navigation (Dashboard, Manage Products, Manage Blog, User Management)
+    Product Management Interface (List of Products, Add/Edit/Delete Products)
+    Blog Management Interface (List of Blog Posts, Approve/Delete Posts)
+    User Management Interface (List of Users, Edit User Details, Block/Unblock User)
+
+2 )
+
+Website Mockup Structure:
+
+    Header:
+        Logo of the website.
+        Navigation menu with links for Home, Products, Blog, Language selection, and User Account.
+
+    Home Page:
+        Featured products with images and brief descriptions.
+        Latest blog posts with titles and excerpts.
+        Language selection option.
+        Call-to-action buttons for user registration/login.
+
+    User Registration/Login:
+        Form for user registration with fields for name, email, password, etc.
+        Login form for existing users.
+        Option for users to choose language during registration.
+
+    User Profile:
+        User profile page displaying account details.
+        Option to edit/update profile information.
+
+    Product Pages:
+        Individual pages for each product with detailed descriptions, images, and a "Add to Cart" button.
+        Search functionality to find products based on keywords.
+
+    Blog Section:
+        List of blog posts with titles, publication dates, and excerpts.
+        Detail page for each blog post with the full content.
+
+    Admin Interface:
+        Separate admin dashboard accessible only to admin users.
+        Sections for managing accounts, blog posts, and products.
+        Forms for adding new blog posts and products.
+
+    Checkout Process:
+        Shopping cart summary.
+        Checkout form with user details, geolocation, and payment options (PayPal).
+        Order confirmation page.
+
+    Footer:
+        Contact details.
+        Social media links.
+        Language selection.
+
+Arborescence (Website Navigation):
+
+    Home
+        Featured Products
+        Latest Blog Posts
+        Registration/Login
+    Products
+        Product Categories
+        Individual Product Pages
+    Blog
+        List of Blog Posts
+        Individual Blog Post Pages
+    User Profile
+        Account Details
+        Edit Profile
+    Admin Dashboard
+        Manage Accounts
+        Manage Blog Posts
+        Manage Products
+    Checkout
+        Shopping Cart
+        Checkout Form
+        Order Confirmation

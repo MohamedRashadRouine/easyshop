@@ -1,0 +1,221 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{changepage} % Added for adjusting page margins
+
+% Adjust page margins
+\geometry{top=1cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
+
+% Custom title format for chapter
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\textbf{Projet EasyShop} \par}
+    \vspace{1cm}
+    {\LARGE Rapport de Projet \par}
+    \vspace{1cm}
+    {\Large Mohamed Rashad Rouine \\ Ouday Djobbi \\ Amine Sehiri \par}
+    \vspace{1.5cm}
+    
+    \vfill
+    {\large École Supérieure des Sciences Économiques et Commerciales de Tunis \par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\chapter{Introduction générale}
+Le secteur du commerce électronique est en perpétuelle évolution, et le projet EasyShop s'inscrit dans le contexte d'une demande croissante de solutions e-commerce efficaces et adaptées aux besoins des petites entreprises tunisiennes. Ce chapitre introductif offre une vue d'ensemble du projet, soulignant son importance dans le paysage économique actuel.
+
+\section{Contexte du Projet}
+\subsection{Présentation du projet}
+EasyShop est une plateforme e-commerce moderne et innovante qui vise à simplifier la vente de produits artisanaux, de bricolage (DIY) et de vêtements. Cette application, développée avec React-Bootstrap pour le Front-end et Node.js associé à Firebase pour le Back-end, permettra au propriétaire du site de cibler des niches de marché spécifiques en fonction de ses préférences. EasyShop offre également des fonctionnalités de paiement électronique sécurisé et de livraison.
+
+\subsection{Étude de l'existant}
+L'analyse de l'existant a mis en lumière les lacunes des solutions e-commerce actuelles pour les petites entreprises en Tunisie. Parmi ces lacunes, on retrouve des interfaces utilisateur peu conviviales, un manque de fonctionnalités adaptées au marché local et des processus de paiement peu optimisés.
+
+\subsection{Problématique}
+Face à ces défis, le projet EasyShop se donne pour mission de déterminer la meilleure approche pour fournir une solution e-commerce complète, répondant aux besoins spécifiques du "Small Business" tunisien.
+
+\subsection{Solution proposée}
+La solution proposée consiste à développer une application e-commerce robuste, conviviale et dotée de fonctionnalités spécifiques au marché tunisien. Cette solution sera implémentée en utilisant React-Bootstrap pour le Front-end et Node.js associé à Firebase pour le Back-end, offrant ainsi une combinaison moderne et évolutive.
+
+\newpage
+
+\section{Méthodologie de développement adoptée}
+\subsection{Étude comparative des méthodologies de développement}
+Lors de l'étude comparative des méthodologies de développement, trois approches majeures ont été examinées : Agile, Waterfall et SCRUM.
+
+\subsubsection{Méthodologie Agile}
+La méthodologie Agile se distingue par sa flexibilité et son adaptabilité aux changements. Elle favorise une collaboration étroite avec les clients et permet des ajustements rapides en réponse aux évolutions du marché.
+
+\subsubsection{Méthodologie Waterfall}
+La méthodologie Waterfall, bien que structurée, peut présenter des limitations en termes de réactivité aux changements. Elle suit un processus linéaire, ce qui peut être moins adapté à des projets où les exigences peuvent évoluer rapidement.
+
+\subsubsection{Méthodologie SCRUM}
+La méthodologie SCRUM a été retenue pour le projet EasyShop en raison de sa flexibilité et de sa capacité à s'adapter aux changements fréquents. SCRUM offre une approche itérative, ce qui est particulièrement adapté au développement d'une application e-commerce.
+
+\subsection{Choix de la méthodologie}
+Le choix de la méthodologie SCRUM s'est imposé naturellement pour plusieurs raisons. Tout d'abord, SCRUM offre une flexibilité qui s'aligne parfaitement avec la nature évolutive du développement d'une application e-commerce. De plus, la capacité de SCRUM à gérer efficacement les changements de priorités et les ajustements fréquents constitue un atout majeur dans un environnement dynamique.
+
+En adoptant SCRUM, nous nous engageons à une approche itérative et incrémentale du développement, favorisant une communication constante au sein de l'équipe et assurant une adaptation continue aux besoins changeants du marché.
+
+
+\chapter{Etude Préliminaire}
+Cette étape initiale du projet vise à définir clairement les besoins du système et à établir les bases pour le développement ultérieur de l'application.
+
+\section{Capture des besoins}
+\subsection{Identification des acteurs}
+Les principaux acteurs identifiés dans le système sont les visiteurs, les utilisateurs et les administrateurs. Chacun de ces acteurs a des rôles spécifiques et des interactions distinctes avec l'application.
+
+\subsection{Besoins fonctionnels}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Acteurs & Besoins fonctionnels \\
+        \hline
+        Visitor & Visualiser les articles du blog, Consulter les produits \\
+        \hline
+        User & Consulter les produits, Gérer son compte utilisateur, Effectuer des commandes \\
+        \hline
+        Admin & Gérer les comptes utilisateurs, Gérer les articles du blog, Gérer les produits \\
+        \hline
+    \end{tabular}
+    \caption{Acteurs et besoins fonctionnels}
+\end{table}
+
+\subsection{Besoins non fonctionnels}
+Les besoins non fonctionnels comprennent la multilinguisme, la géolocalisation, le paiement électronique via PayPal, des fiches produits détaillées, et un formulaire de contact accessible en bas de la page du site.
+
+\section{Diagramme de cas d'utilisation globale}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.54\textwidth]{use_case_diagram.png}
+    \caption{UML}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.04\textwidth]{class_diagram.png}
+    \caption{Diagramme de classes}
+\end{figure}
+
+\section{Classement des cas d'utilisation}
+Les cas d'utilisation ont été classés en fonction de leur importance et de leur impact sur le système. Cela a permis de prioriser les fonctionnalités essentielles pour le développement initial.
+\begin{figure}[H]
+    \begin{adjustwidth}{-1.5cm}{}
+    \centering
+    \includegraphics[width=1.165\textwidth]{L'arborescence.png}
+    \caption{L'arborescence
+}
+    \end{adjustwidth}
+\end{figure}
+
+\section{Pilotage avec SCRUM}
+\subsection{Backlog du Produit}
+\begin{table}[H]
+    \begin{adjustwidth}{-1.3cm}{}
+    \centering
+    \small
+    \begin{tabular}{|p{1.45cm}|p{0.95cm}|p{4.5cm}|p{9.05cm}|p{1.25cm}|p{0.9cm}|}
+        \hline
+        Type & ID & Feature & Description & Priority & Est(d) \\
+        \hline
+        userStory & US001 & Login and Registration & As a Visitor, I want to register for an account so that I can become a User. & High & 3 \\
+        userStory & US002 & Viewing Content & As a User, I want to see blog posts and products on the website. & Medium & 5 \\
+        userStory & US003 & Multilingual Support & As a User, I want to choose between English, French, or Arabic languages for the website. & Medium & 5 \\
+        userStory & US004 & Content Management & As an Admin, I want to add and remove multimedia content such as photos and videos. & High & 8 \\
+        userStory & US005 & Geolocation & As a User, I want a geolocation feature for the shop's checkout system. & High & 8 \\
+        userStory & US006 & Electronic Payment & As a User, I want to make electronic payments using PayPal at checkout. & High & 10 \\
+        userStory & US007 & Product Pages & As a User, I want detailed product pages that show product descriptions. & Medium & 5 \\
+        userStory & US008 & Contact Form & As a User, I want a contact form with the shop's contact details at the bottom of the website. & Low & 3 \\
+        userStory & US009 & Blog Post Approval & As an Admin, I want to approve blog posts submitted by users before they are published. & Medium & 5 \\
+        userStory & US010 & Search Functionality & As a User, I want to search for products based on keywords. & Medium & 8 \\
+        feature & F001 & Blog Management & Admin can manage blog posts. & High & 8 \\
+        feature & F002 & Product Management & Admin can manage products. & High & 8 \\
+        feature & F003 & Checkout Process & Implementing the checkout process with payment integration (e.g., PayPal). & High & 13 \\
+        feature & F004 & Search Engine Optimization (SEO) & Optimize the code for better search engine visibility. & Medium & 10 \\
+        feature & F005 & Profile Management & Allow users to edit and update their profiles. & Medium & 8 \\
+        task & T001 & Create registration form & Create registration form. & Low & 2 \\
+        task & T002 & Implement user authentication & Implement user authentication. & Medium & 4 \\
+        task & T003 & Create admin interface for managing blog posts & Create admin interface for managing blog posts. & Medium & 5 \\
+        task & T004 & Create admin interface for managing products & Create admin interface for managing products. & Medium & 5 \\
+        task & T005 & Integrate PayPal for electronic payments & Integrate PayPal for electronic payments. & High & 8 \\
+        task & T006 & Implement blog post approval workflow & Implement blog post approval workflow. & Medium & 5 \\
+        task & T007 & Implement product search functionality & Implement product search functionality. & High & 8 \\
+        task & T008 & Implement SEO best practices in the code & Implement SEO best practices in the code. & Medium & 10 \\
+        task & T009 & Create user interface for profile management & Create user interface for profile management. & Medium & 6 \\
+        \hline
+    \end{tabular}
+    \caption{Backlog du Produit}
+    \end{adjustwidth}
+\end{table}
+
+\subsection{Planification des Sprints}
+La planification des sprints a été élaborée en prenant en considération les fonctionnalités prioritaires définies dans le backlog du produit. Chaque sprint sera axé sur la réalisation d'objectifs spécifiques afin d'assurer un développement progressif et itératif.
+
+\subsubsection{Sprint 1 : Fonctionnalités Initiales}
+\begin{itemize}
+    \item \textbf{Objectif :} Mise en place des fonctionnalités de base de l'application.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Création du formulaire d'inscription, implémentation de l'authentification utilisateur, mise en place de l'affichage des articles et produits.
+\end{itemize}
+
+\subsubsection{Sprint 2 : Multilinguisme et Gestion de Contenu}
+\begin{itemize}
+    \item \textbf{Objectif :} Intégration du support multilingue et mise en place de la gestion de contenu.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Ajout du support multilingue (anglais, français, arabe), création de l'interface d'administration pour la gestion des contenus multimédias.
+\end{itemize}
+
+\subsubsection{Sprint 3 : Géolocalisation et Paiement Électronique}
+\begin{itemize}
+    \item \textbf{Objectif :} Intégration de la fonction de géolocalisation et mise en place du paiement électronique.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Ajout de la fonction de géolocalisation pour le processus de paiement, intégration du paiement électronique via PayPal.
+\end{itemize}
+
+\subsubsection{Sprint 4 : Pages Produits et Formulaire de Contact}
+\begin{itemize}
+    \item \textbf{Objectif :} Création des pages détaillées des produits et ajout d'un formulaire de contact.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Mise en place de pages détaillées pour les produits, ajout d'un formulaire de contact en bas de la page du site.
+\end{itemize}
+
+\subsubsection{Sprint 5 : Gestion du Blog et Recherche de Produits}
+\begin{itemize}
+    \item \textbf{Objectif :} Implémentation de la gestion du blog et ajout de la fonctionnalité de recherche de produits.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Création de l'interface d'administration pour la gestion des articles de blog, ajout de la fonctionnalité de recherche de produits par mots-clés.
+\end{itemize}
+
+\subsubsection{Sprint 6 : Optimisation SEO et Profils Utilisateurs}
+\begin{itemize}
+    \item \textbf{Objectif :} Optimisation du code pour une meilleure visibilité des moteurs de recherche et ajout de la gestion des profils utilisateurs.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Implémentation des meilleures pratiques SEO dans le code, création de l'interface utilisateur pour la gestion des profils.
+\end{itemize}
+
+\subsubsection{Sprint 7 : Finalisation et Tests}
+\begin{itemize}
+    \item \textbf{Objectif :} Finalisation du développement et réalisation des tests.
+    \item \textbf{Durée :} 3 jours
+    \item \textbf{Tâches :} Correction des bugs, optimisation des performances, réalisation de tests approfondis.
+\end{itemize}
+
+La planification des sprints s'aligne sur la réalisation progressive des fonctionnalités définies dans le backlog du produit, assurant ainsi une approche itérative et incrémentale du développement de l'application EasyShop.
+
+
+\section*{Conclusion}
+En conclusion de ce chapitre d'étude préliminaire, les bases nécessaires au développement de l'application e-commerce EasyShop ont été établies. La définition des besoins, la sélection de la méthodologie SCRUM, et la priorisation des fonctionnalités dans le backlog du produit sont des étapes cruciales pour assurer le succès du projet.
+
+\end{document}

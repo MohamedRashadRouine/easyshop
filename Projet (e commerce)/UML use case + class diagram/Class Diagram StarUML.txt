@@ -1,0 +1,83 @@
+@startuml
+
+!define CLASSURL https://www.plantuml.com/plantuml/svg/
+
+class Visitor {
+  +id
+  --
+  +seeBlogPosts()
+  +seeProducts()
+  +registerAccount()
+}
+
+class User {
+  +id
+  +email
+  +password
+  --
+  +seeBlogPosts()
+  +seeProducts()
+  +getAccountDetails()
+  +placeOrder()
+}
+
+class Admin {
+  +id
+  +email
+  +password
+  --
+  +manageAccounts()
+  +manageBlogPosts()
+  +manageProducts()
+}
+
+class Order {
+  +id
+  +geolocation
+  --
+  +addProduct(product: Product)
+  +getUser(): User
+}
+
+class Checkout {
+  +id
+  --
+  +processPayment()
+  +getOrderDetails(): Order
+}
+
+class BlogPost {
+  +id
+  +description
+}
+
+class Product {
+  +id
+  +description
+}
+
+class Account {
+  +id
+  +email
+  +password
+}
+
+Visitor "1" --> "*" BlogPost : sees
+Visitor "1" --> "*" Product : sees
+Visitor "1" --> "*" Account : registers
+
+User "1" --> "*" BlogPost : sees
+User "1" --> "*" Product : sees
+User "1" --> "1" Account : has
+User "1" --> "*" Order : places
+
+Admin "1" --> "*" Account : manages
+Admin "1" --> "*" BlogPost : manages
+Admin "1" --> "*" Product : manages
+
+Order "1" --> "*" Product : contains
+Order "1" --> "1" User : belongs to
+
+Checkout "1" --> "1" Order : has
+
+@enduml
