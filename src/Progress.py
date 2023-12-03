@@ -7,7 +7,9 @@ def list_files(startpath):
         print('{}{}/'.format(indent, os.path.basename(root)))
         subindent = ' ' * 4 * (level + 1)
         for f in files:
-            print('{}{}'.format(subindent, f))
+            # Check if the file is not in the root directory
+            if os.path.join(root, f) != startpath:
+                print('{}{}'.format(subindent, f))
 
 # Replace 'your_project_directory' with your actual project directory path
 project_directory = '.'
