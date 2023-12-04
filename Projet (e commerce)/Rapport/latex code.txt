@@ -1,12 +1,20 @@
 \documentclass[12pt, a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[french]{babel}
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{float}
 \usepackage{changepage} % Added for adjusting page margins
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}  % Added for clickable links in the TOC
+
+% Define colors for code highlighting
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 % Adjust page margins
 \geometry{top=1cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
@@ -19,7 +27,7 @@
 \begin{titlepage}
     \centering
     \vspace*{2cm}
-    {\Huge\textbf{Projet EasyShop} \par}
+    {\Huge\textbf{Projet EasyShop Tej Chasse} \par}
     \vspace{1cm}
     {\LARGE Rapport de Projet \par}
     \vspace{1cm}
@@ -34,20 +42,42 @@
 \newpage
 
 \chapter{Introduction générale}
-Le secteur du commerce électronique est en perpétuelle évolution, et le projet EasyShop s'inscrit dans le contexte d'une demande croissante de solutions e-commerce efficaces et adaptées aux besoins des petites entreprises tunisiennes. Ce chapitre introductif offre une vue d'ensemble du projet, soulignant son importance dans le paysage économique actuel.
 
-\section{Contexte du Projet}
+
+
+\section{Évolution du Commerce Électronique}
+
+Au fil des années, le commerce électronique a émergé comme un catalyseur majeur du changement, redéfinissant la manière dont les entreprises interagissent avec leur clientèle. La montée en puissance des plateformes en ligne a créé un écosystème où la facilité d'accès, la diversité des offres, et la commodité des transactions sont devenues des éléments essentiels. EasyShop Tej Chasse s'inscrit dans cette tendance, tirant parti des avancées technologiques pour créer une expérience d'achat en ligne exceptionnelle pour les passionnés de chasse en Tunisie.
+
+\section{La Demande Croissante pour des Solutions E-Commerce Personnalisées}
+
+Avec la prolifération des petites entreprises, la demande pour des solutions e-commerce adaptées et efficaces n'a jamais été aussi forte. Les commerçants cherchent des plateformes flexibles qui peuvent être façonnées pour répondre à leurs besoins spécifiques. EasyShop Tej Chasse répond à cet appel en offrant une solution spécialisée, taillée sur mesure pour le marché tunisien de la chasse. Cette personnalisation va au-delà de la simple vente en ligne, englobant des fonctionnalités spécifiques à la chasse et des interfaces adaptées à la culture locale.
+
+\section{EasyShop Tej Chasse : Une Vision d'Ensemble}
+
+EasyShop Tej Chasse n'est pas simplement une plateforme de vente en ligne, c'est une vision qui transcende les frontières du commerce traditionnel. En créant une expérience d'achat dédiée à la chasse, le projet vise à connecter les amateurs de chasse avec des produits de qualité, à encourager les petites entreprises locales, et à contribuer à l'évolution du secteur du commerce électronique en Tunisie. Ce chapitre d'introduction pose les fondations de cette aventure passionnante, mettant en lumière l'importance de EasyShop Tej Chasse dans le contexte économique et technologique actuel.
+
+\section{Objectifs du Projet}
+
+EasyShop Tej Chasse a pour objectif de créer une plateforme e-commerce novatrice qui répond spécifiquement aux besoins des chasseurs tunisiens. En combinant des fonctionnalités modernes avec une approche personnalisée, le projet vise à offrir une expérience d'achat en ligne exceptionnelle, tout en contribuant au dynamisme économique des petites entreprises du secteur de la chasse en Tunisie. Ce rapport explore en détail les différentes phases de développement, les méthodologies adoptées, et les résultats obtenus tout au long du parcours de EasyShop Tej Chasse.
+
+\newpage
+
+\chapter{Contexte du Projet}
+\section{Introduction}
+Le contexte du projet EasyShop Tej Chasse, en tant que plateforme de commerce électronique dédiée à la vente d'équipements de chasse et de vêtements associés, vise à répondre à un besoin spécifique sur le marché tunisien. Ce chapitre présente une vision approfondie du projet, mettant en lumière son importance dans le paysage du commerce électronique, en particulier dans le domaine de la chasse.
+
 \subsection{Présentation du projet}
-EasyShop est une plateforme e-commerce moderne et innovante qui vise à simplifier la vente de produits artisanaux, de bricolage (DIY) et de vêtements. Cette application, développée avec React-Bootstrap pour le Front-end et Node.js associé à Firebase pour le Back-end, permettra au propriétaire du site de cibler des niches de marché spécifiques en fonction de ses préférences. EasyShop offre également des fonctionnalités de paiement électronique sécurisé et de livraison.
+EasyShop Tej Chasse est une plateforme e-commerce spécialisée dans la vente d'articles liés à la chasse, tels que des équipements, des vêtements, et d'autres accessoires. Développée avec React-Bootstrap pour le Front-end et Node.js avec Firebase pour le Back-end, cette application cible les passionnés de chasse en Tunisie, comblant ainsi un vide sur le marché en offrant une solution spécialisée.
 
 \subsection{Étude de l'existant}
-L'analyse de l'existant a mis en lumière les lacunes des solutions e-commerce actuelles pour les petites entreprises en Tunisie. Parmi ces lacunes, on retrouve des interfaces utilisateur peu conviviales, un manque de fonctionnalités adaptées au marché local et des processus de paiement peu optimisés.
+L'analyse de l'existant a révélé un manque d'options dédiées à la vente d'articles de chasse en ligne en Tunisie. Les solutions actuelles ne répondent pas de manière optimale aux besoins des chasseurs locaux en termes d'accessibilité, de diversité de produits, et de processus de paiement.
 
 \subsection{Problématique}
-Face à ces défis, le projet EasyShop se donne pour mission de déterminer la meilleure approche pour fournir une solution e-commerce complète, répondant aux besoins spécifiques du "Small Business" tunisien.
+Face à ce constat, le projet EasyShop Tej Chasse vise à résoudre la problématique du manque de plateformes spécialisées dans la vente en ligne d'équipements de chasse en Tunisie. Il cherche à fournir une solution complète, conviviale et adaptée au marché local.
 
 \subsection{Solution proposée}
-La solution proposée consiste à développer une application e-commerce robuste, conviviale et dotée de fonctionnalités spécifiques au marché tunisien. Cette solution sera implémentée en utilisant React-Bootstrap pour le Front-end et Node.js associé à Firebase pour le Back-end, offrant ainsi une combinaison moderne et évolutive.
+La solution proposée consiste en une application e-commerce robuste et flexible, développée avec React-Bootstrap et Node.js associé à Firebase. EasyShop Tej Chasse offrira une expérience utilisateur optimale, une variété de produits spécialisés, des fonctionnalités de paiement électronique sécurisé, et une interface d'administration pour gérer efficacement le contenu.
 
 \newpage
 
@@ -218,4 +248,350 @@ La planification des sprints s'aligne sur la réalisation progressive des foncti
 \section*{Conclusion}
 En conclusion de ce chapitre d'étude préliminaire, les bases nécessaires au développement de l'application e-commerce EasyShop ont été établies. La définition des besoins, la sélection de la méthodologie SCRUM, et la priorisation des fonctionnalités dans le backlog du produit sont des étapes cruciales pour assurer le succès du projet.
 
+% Chapter 1: Sprint 1
+\chapter{Sprint 1}
+\section{Introduction}
+Ce chapitre se concentre sur le premier sprint du projet EasyShop Tej Chasse. Il met en évidence les éléments clés du sprint, y compris le backlog du sprint, l'analyse des cas d'utilisation, la conception, la réalisation, et les tests.
+
+\section{Backlog du Sprint}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{1.45cm}|p{0.95cm}|p{4.5cm}|p{9.05cm}|p{1.25cm}|p{0.9cm}|}
+        \hline
+        Type & ID & Feature & Description & Priority & Est(d) \\
+        \hline
+        userStory & US011 & User Authentication & En tant que visiteur, je veux pouvoir m'inscrire pour un compte afin de devenir un utilisateur. & High & 3 \\
+        userStory & US012 & Content Display & En tant qu'utilisateur, je veux voir les articles du blog et les produits sur le site. & Medium & 5 \\
+        userStory & US013 & Basic Functionality Setup & Configuration des fonctionnalités de base de l'application. & High & 5 \\
+        \hline
+    \end{tabular}
+    \caption{Backlog du Sprint 1}
+\end{table}
+
+\section{Analyse}
+\subsection{Diagramme de cas d'utilisation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint_1_uc.png}
+    \caption{Diagramme de cas d'utilisation raffiné pour le Sprint 1}
+\end{figure}
+
+\subsection{Description textuelle}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{2.5cm}|p{12.5cm}|}
+        \hline
+        Cas d'utilisation & User Authentication \\
+        \hline
+        Acteur principal & Visiteur \\
+        Objectif & Permettre au visiteur de s'inscrire pour un compte utilisateur. \\
+        Précondition & L'application est accessible. \\
+        Postcondition & Le visiteur est enregistré en tant qu'utilisateur. \\
+        Scénario nominal & 
+        1. Le visiteur accède à la page d'inscription.
+        2. Le visiteur remplit le formulaire d'inscription.
+        3. Le système enregistre les informations de l'utilisateur.
+        4. Le système redirige l'utilisateur vers la page d'accueil en tant qu'utilisateur authentifié.
+        \\
+        Scénario alternatif & L'utilisateur annule le processus d'inscription à tout moment. \\
+        \hline
+    \end{tabular}
+    \caption{Description textuelle du cas d'utilisation User Authentication}
+\end{table}
+
+\subsection{Diagramme de séquence}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{sprint_1_sequence.png}
+    \caption{Diagramme de séquence pour le cas d'utilisation User Authentication}
+\end{figure}
+
+
+
+\section{Conception}
+\subsection{Digramme de Classe}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{sprint_1_class.png}
+    \caption{Diagramme de Classe du Sprint 1 (Conception)}
+\end{figure}
+
+\section{Réalisation}
+\subsection{Captures d'Écran des Interfaces (Incrément du Sprint)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Sprint_1_Register.PNG}
+    \caption{Captures d'Écran des Interfaces (Regsiter)}
+\end{figure}
+\section{Test et Validation}
+\subsection{Tableau Récapitulatif des Méthodes Testées}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{4.5cm}|p{4.5cm}|p{3.5cm}|}
+        \hline
+        Cas à tester & Démarche & Résultat \\
+        \hline
+        User Authentication - Scénario nominal & 1. Accéder à la page d'inscription \newline 2. Remplir le formulaire d'inscription \newline 3. Soumettre le formulaire \newline 4. Redirection vers la page d'accueil & Succès \\
+        \hline
+        User Authentication - Scénario alternatif & 1. Accéder à la page d'inscription \newline 2. Annuler le processus d'inscription & Succès \\
+        \hline
+    \end{tabular}
+    \caption{Tableau Récapitulatif des Méthodes Testées - Sprint 1}
+\end{table}
+
+\section{Conclusion}
+En conclusion de ce chapitre sur le Sprint 1, les fonctionnalités initiales ont été mises en place avec succès. Le processus d'inscription et l'affichage de contenu de base ont été implémentés, jetant les bases pour le développement ultérieur.
+
+
+% Chapter 2: Sprint 2
+\chapter{Sprint 2: Multilinguisme et Gestion de Contenu}
+
+\section{Introduction}
+Dans ce sprint, nous nous concentrons sur l'intégration du support multilingue et la mise en place de la gestion de contenu pour l'application EasyShop Tej Chasse.
+
+\section{Backlog du Sprint}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{1.45cm}|p{0.95cm}|p{4.5cm}|p{9.05cm}|p{1.25cm}|p{0.9cm}|}
+        \hline
+        Type & ID & Feature & Description & Priority & Est(d) \\
+        \hline
+        userStory & US003 & Multilingual Support & As a User, I want to choose between English, French, or Arabic languages for the website. & Medium & 5 \\
+        userStory & US004 & Content Management & As an Admin, I want to add and remove multimedia content such as photos and videos. & High & 8 \\
+        \hline
+    \end{tabular}
+    \caption{Backlog du Sprint 2}
+\end{table}
+
+\section{Analyse}
+\subsection{Diagramme de Cas d'Utilisation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{sprint_2_uc.png}
+    \caption{Diagramme de Cas d'Utilisation du Sprint 2}
+\end{figure}
+
+\subsection{Description Textuelle des Cas d'Utilisation}
+\subsubsection{Cas d'Utilisation : Multilingual Support}
+\begin{itemize}
+    \item \textbf{Acteur Principal :} Utilisateur
+    \item \textbf{Objectif :} Choisir entre les langues anglaise, française ou arabe pour le site Web.
+    \item \textbf{Précondition :} L'utilisateur accède aux paramètres de langue.
+    \item \textbf{Scénario Nominal :}
+    \begin{enumerate}
+        \item L'utilisateur accède aux paramètres du site.
+        \item L'utilisateur choisit la langue parmi les options disponibles (anglais, français, arabe).
+        \item Le site se met à jour pour afficher le contenu dans la langue sélectionnée.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{Cas d'Utilisation : Content Management}
+\begin{itemize}
+    \item \textbf{Acteur Principal :} Administrateur
+    \item \textbf{Objectif :} Ajouter et supprimer du contenu multimédia tel que des photos et des vidéos.
+    \item \textbf{Précondition :} L'administrateur est connecté et accède à l'interface de gestion de contenu.
+    \item \textbf{Scénario Nominal :}
+    \begin{enumerate}
+        \item L'administrateur accède à l'interface de gestion de contenu.
+        \item L'administrateur ajoute une nouvelle photo ou vidéo.
+        \item Le site met à jour le contenu multimédia.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Diagramme de Séquence (Cas d'Utilisation : Multilingual Support)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint_2_sequence.png}
+    \caption{Diagramme de Séquence - Multilingual Support}
+\end{figure}
+
+
+
+\section{Conception}
+\subsection{Digramme de Classe}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{sprint_2_class.png}
+    \caption{Diagramme de Classe du Sprint 2 (Conception)}
+\end{figure}
+
+\section{Réalisation}
+\subsection{Captures d'Écran des Interfaces (Incrément du Sprint)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Sprint_2_Language.PNG}
+    \caption{Captures d'Écran des Interfaces (Language)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Sprint_2_ContentManagement.PNG}
+    \caption{Captures d'Écran des Interfaces (Content Management)}
+\end{figure}
+\section{Test et Validation}
+\subsection{Tableau Récapitulatif des Méthodes Testées}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{3cm}|}
+        \hline
+        Cas à Tester & Démarche & Résultat \\
+        \hline
+        Multilingual Support & Vérifier les paramètres de langue et changer la langue du site. & Succès \\
+        Content Management & Ajouter et supprimer du contenu multimédia. & Succès \\
+        \hline
+    \end{tabular}
+    \caption{Tableau Récapitulatif des Tests Sprint 2}
+\end{table}
+
+\section{Conclusion}
+Le Sprint 2 a permis d'intégrer le support multilingue et d'établir les bases de la gestion de contenu pour l'application EasyShop Tej Chasse. Ces fonctionnalités amélioreront l'expérience utilisateur et offriront une plus grande flexibilité pour la gestion du contenu par l'administrateur.
+
+% Chapter 3: Sprint 3
+\chapter{Sprint 3: Géolocalisation et Paiement Électronique}
+
+\section{Introduction}
+Dans ce sprint, notre objectif est d'intégrer la fonction de géolocalisation et de mettre en place le paiement électronique via PayPal pour l'application EasyShop Tej Chasse.
+
+\section{Backlog du Sprint}
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{|p{1.45cm}|p{0.95cm}|p{4.5cm}|p{9.05cm}|p{1.25cm}|p{0.9cm}|}
+        \hine
+        Type & ID & Feature & Description & Priority & Est(d) \\
+        \hline
+        userStory & US005 & Geolocation & As a User, I want a geolocation feature for the shop's checkout system. & High & 8 \\
+        userStory & US006 & Electronic Payment & As a User, I want to make electronic payments using PayPal at checkout. & High & 10 \\
+        \hline
+    \end{tabular}
+    \caption{Backlog du Sprint 3}
+\end{table}
+
+\section{Analyse}
+\subsection{Diagramme de Cas d'Utilisation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{sprint_3_uc.png}
+    \caption{Diagramme de Cas d'Utilisation du Sprint 3}
+\end{figure}
+
+\subsection{Description Textuelle des Cas d'Utilisation}
+\subsubsection{Cas d'Utilisation : Geolocation}
+\begin{itemize}
+    \item \textbf{Acteur Principal :} Utilisateur
+    \item \textbf{Objectif :} Utiliser la fonction de géolocalisation pour le processus de paiement.
+    \item \textbf{Précondition :} L'utilisateur est sur la page de paiement.
+    \item \textbf{Scénario Nominal :}
+    \begin{enumerate}
+        \item L'utilisateur autorise l'accès à la géolocalisation.
+        \item Le site utilise la géolocalisation pour optimiser le processus de paiement.
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{Cas d'Utilisation : Electronic Payment}
+\begin{itemize}
+    \item \textbf{Acteur Principal :} Utilisateur
+    \item \textbf{Objectif :} Effectuer des paiements électroniques via PayPal.
+    \item \textbf{Précondition :} L'utilisateur est sur la page de paiement.
+    \item \textbf{Scénario Nominal :}
+    \begin{enumerate}
+        \item L'utilisateur choisit l'option de paiement électronique via PayPal.
+        \item L'utilisateur est redirigé vers la page de paiement PayPal.
+        \item L'utilisateur effectue le paiement sur la plateforme PayPal.
+        \item Le site reçoit la confirmation du paiement.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{Diagramme de Séquence (Cas d'Utilisation : Electronic Payment)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{sprint_3_sequence.png}
+    \caption{Diagramme de Séquence - Electronic Payment}
+\end{figure}
+
+
+\section{Conception}
+\subsection{Digramme de Classe}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{sprint_3_class.png}
+    \caption{Diagramme de Classe du Sprint 3 (Conception)}
+\end{figure}
+
+\section{Réalisation}
+\subsection{Captures d'Écran des Interfaces (Incrément du Sprint)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Sprint_3_Geolocation.PNG}
+    \caption{Captures d'Écran des Interfaces (Geolocation)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Sprint_3_Payment.PNG}
+    \caption{Captures d'Écran des Interfaces (Payment)}
+\end{figure}
+\section{Test et Validation}
+\subsection{Tableau Récapitulatif des Méthodes Testées}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{5cm}|p{5cm}|p{3cm}|}
+        \hline
+        Cas à Tester & Démarche & Résultat \\
+        \hline
+        Geolocation & Autoriser l'accès à la géolocalisation pendant le paiement. & Succès \\
+        Electronic Payment & Effectuer un paiement électronique via PayPal. & Succès \\
+        \hline
+    \end{tabular}
+    \caption{Tableau Récapitulatif des Tests Sprint 3}
+\end{table}
+
+\section{Conclusion}
+Le Sprint 3 a ajouté des fonctionnalités cruciales à l'application EasyShop Tej Chasse, notamment la géolocalisation pour optimiser le processus de paiement et la possibilité de réaliser des paiements électroniques via PayPal. Ces fonctionnalités amélioreront l'efficacité et la flexibilité du processus d'achat pour les utilisateurs.
+
+
+
+\chapter{Clôture du Projet}
+\section{Introduction}
+Ce chapitre offre une conclusion au projet, résumant les aspects clés et mettant en évidence les expériences acquises au cours du processus de développement.
+
+\subsection{Environnements de développement}
+\subsubsection{Environnement Matériel}
+Nous avons principalement utilisé nos ordinateurs portables pour le développement, avec des configurations standard adaptées aux tâches de développement logiciel.
+
+\subsubsection{Environnement logiciel}
+Notre environnement logiciel comprenait :
+- Visual Studio Code (VSCode) comme environnement de développement intégré (IDE) principal.
+- React.js pour le développement front-end, utilisant divers modules tels que PayPal et Email.js, entre autres.
+- Node.js pour le script côté serveur et le développement back-end.
+- Firebase pour l'infrastructure et les services sans serveur.
+
+\subsubsection{Technologies adoptées}
+Tout au long du projet, nous avons adopté plusieurs technologies clés :
+- React.js pour la construction d'interfaces utilisateur dynamiques.
+- Node.js pour le scripting côté serveur et le développement back-end.
+- Firebase pour le développement basé sur le cloud et les services.
+- API PayPal pour l'intégration de paiements électroniques sécurisés.
+- Email.js pour l'envoi d'e-mails de confirmation.
+
+\subsection{Difficultés Rencontrées}
+Le processus de développement n'a pas été sans défis. Certaines des difficultés rencontrées incluent :
+- GitHub ne sauvegardant pas l'ensemble du travail effectué, nécessitant des téléchargements manuels.
+- Firebase ne fonctionnant pas comme prévu, nécessitant des dépannages supplémentaires.
+- Des difficultés à lier divers composants de notre travail de manière transparente.
+- Des problèmes avec l'intégration du système de paiement PayPal.
+- Des difficultés rencontrées lors de l'utilisation d'un serveur Node pour l'envoi d'e-mails.
+- Des problèmes liés à Firestore dans la gestion des blogs et des produits.
+
+Ces défis ont fourni des expériences d'apprentissage précieuses et des opportunités de résolution de problèmes.
+
+\section{Conclusion}
+En conclusion, bien que le projet ait atteint un certain niveau de réalisation, il met en évidence la nature continue du développement logiciel. Il reste du travail à faire pour concrétiser pleinement les fonctionnalités envisagées et garantir une expérience utilisateur transparente. Les défis rencontrés tout au long du projet ont contribué à notre croissance en tant que développeurs, et nous sommes impatients de les relever dans les futures itérations.
+
+
+
 \end{document}
+
+
