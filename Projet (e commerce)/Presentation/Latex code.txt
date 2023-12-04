@@ -1,0 +1,185 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usetheme{metropolis}
+\usepackage{adjustbox}
+\usepackage{caption} 
+
+\title{Projet EasyShop Tej Chasse}
+\subtitle{Rapport de Projet}
+\author{Mohamed Rashad Rouine, Ouday Djobbi, Amine Sehiri}
+\institute{École Supérieure des Sciences Économiques et Commerciales de Tunis}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction générale}
+
+\begin{frame}{Demande Croissante pour des Solutions E-Commerce Personnalisées}
+    \begin{itemize}
+        \item La demande pour des solutions e-commerce adaptées n'a jamais été aussi forte.
+        \item EasyShop Tej Chasse répond à ce besoin, offrant une solution spécialisée pour la chasse en Tunisie.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Objectifs du Projet}
+    \begin{itemize}
+        \item Créer une plateforme e-commerce novatrice pour les chasseurs tunisiens.
+        \item Offrir une expérience d'achat exceptionnelle et contribuer au dynamisme des petites entreprises.
+    \end{itemize}
+\end{frame}
+
+\section{Contexte du Projet}
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item EasyShop Tej Chasse : plateforme de commerce électronique dédiée à la chasse en Tunisie.
+        \item Développée avec React-Bootstrap (Front-end) et Node.js avec Firebase (Back-end).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Étude de l'existant et Problématique}
+    \begin{itemize}
+        \item Manque d'options pour la vente d'articles de chasse en ligne en Tunisie.
+        \item Solutions actuelles ne répondent pas efficacement aux besoins des chasseurs locaux.
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Solution Proposée}
+    \begin{itemize}
+        \item EasyShop Tej Chasse résout le manque de plateformes spécialisées dans la vente en ligne d'équipements de chasse en Tunisie.
+        \item Fournit une solution complète et adaptée au marché local.
+        \item Application e-commerce robuste et flexible avec React-Bootstrap et Node.js associé à Firebase.
+        \item Expérience utilisateur optimale, variété de produits spécialisés, paiement électronique sécurisé, et interface d'administration.
+    \end{itemize}
+\end{frame}
+
+\section{Méthodologie de développement adoptée}
+\begin{frame}{Étude Comparative et choix des Méthodologies}
+    \begin{itemize}
+        \item Méthodologie Agile, Waterfall, et SCRUM examinées.
+        \item SCRUM choisi pour sa flexibilité et son adaptation aux changements.
+        \item Approche itérative et incrémentale pour s'adapter aux besoins changeants du marché.
+    \end{itemize}
+\end{frame}
+
+
+\section{Sprints}
+\begin{frame}{Sprint 1: Authentification et Listing des Produits}
+    \begin{itemize}
+        \item Authentification utilisateur pour une expérience sécurisée.
+        \item Interface de liste de produits attrayante.
+        \item Défis rencontrés dans l'établissement d'un système d'authentification robuste.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Register et Login}
+\begin{figure}[H]
+    \vfill
+    \begin{center}
+        \begin{adjustbox}{valign=c}
+            \includegraphics[width=1\textwidth]{Sprint_1_Register.PNG}
+        \end{adjustbox}
+    \end{center}
+    \vfill
+    \captionof{figure}{Captures d'Écran des Interfaces (Regsiter)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Products}
+\begin{figure}[H]
+    \vfill
+    \begin{center}
+        \begin{adjustbox}{valign=c}
+            \includegraphics[width=1\textwidth]{Sprint_1_Products.PNG}
+        \end{adjustbox}
+    \end{center}
+    \vfill
+    \captionof{figure}{Captures d'Écran des Interfaces (Products)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Sprint 2: Multilinguisme et Gestion de Contenu}
+    \begin{itemize}
+        \item Support multilingue pour une audience élargie.
+        \item Gestion de contenu pour une expérience multimédia dynamique.
+        \item Défis dans l'intégration de fonctionnalités multilingues.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Language}
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{valign=c}
+    \includegraphics[width=1\textwidth]{Sprint_2_Language.PNG}
+    \end{adjustbox}
+    \captionof{figure}{Captures d'Écran des Interfaces (Language)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Content Management}
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{valign=c}
+    \includegraphics[width=1\textwidth]{Sprint_2_ContentManagement.PNG}
+    \end{adjustbox}
+    \captionof{figure}{Captures d'Écran des Interfaces (Content Management)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Sprint 3: Géolocalisation et Paiement Électronique}
+    \begin{itemize}
+        \item Intégration de la géolocalisation pour une expérience d'achat personnalisée.
+        \item Paiements électroniques via PayPal pour plus de commodité.
+        \item Surmonter les défis de l'implémentation de la géolocalisation et de l'intégration PayPal.
+    \end{itemize}
+\end{frame}
+\begin{frame}{Geolocation}
+\subsection{Captures d'Écran des Interfaces (Incrément du Sprint)}
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{valign=c}
+    \includegraphics[width=1\textwidth]{Sprint_3_Geolocation.PNG}
+    \end{adjustbox}
+    \captionof{figure}{Captures d'Écran des Interfaces (Geolocation)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Payment}
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{valign=c}
+    \includegraphics[width=1\textwidth]{Sprint_3_Payment.PNG}
+    \end{adjustbox}
+    \captionof{figure}{Captures d'Écran des Interfaces (Payment)}
+\end{figure}
+\end{frame}
+
+\section{Clôture du Projet}
+\begin{frame}{Environnements de Développement}
+    \begin{itemize}
+        \item Utilisation de Visual Studio Code, React.js, Node.js, Firebase, API PayPal, Email.js.
+        \item Défis rencontrés avec GitHub, Firebase, intégration de composants, PayPal, Firestore.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item Malgré un niveau de réalisation atteint, le projet souligne la nature continue du développement logiciel.
+        \item Défis rencontrés ont contribué à la croissance en tant que développeurs.
+        \item Ambitions plus élevées pour l'avenir, impatients de relever de nouveaux défis.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Q \& A}
+    \centering
+    \Huge
+    Merci ! \\
+    Des Questions ?
+\end{frame}
+
+\end{document}
