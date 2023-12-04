@@ -12,6 +12,6 @@ def list_files(startpath):
                 print('{}{}'.format(subindent, f))
 
 # Replace 'your_project_directory' with your actual project directory path
-project_directory = '.'
+project_directory = './src'
 
 list_files(project_directory)

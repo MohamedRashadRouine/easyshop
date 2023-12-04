@@ -1,16 +1,17 @@
 import React, { useState } from 'react'; 
 import { auth } from '../../firebase';
-import { signOut } from 'firebase/auth'; // Import signOut directly from firebase/auth
+import { signOut } from 'firebase/auth'; 
 import guns from '../Assets/guns.png';
 import carticon from '../Assets/cart.png';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './Navbar.css'; // Add this line to import the CSS file
+import './Navbar.css'; 
+import LanguageButton from '../LanguageButton/LanguageButton';
 
 const Navbar = () => {
   const [menu, setMenu] = useState('shop');
   const user = auth.currentUser;
-  const navigate = useNavigate(); // Add this line for the useNavigate hook
+  const navigate = useNavigate(); 
 
   const handleLogout = async () => {
     try {
@@ -71,6 +72,7 @@ const Navbar = () => {
         )}
         <Link to='/Cart'><img src={carticon} alt="cart" /></Link>
         <div className="nav-cart-count">0</div>
+        <LanguageButton />
       </div>
     </div>
   );
