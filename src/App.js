@@ -49,6 +49,7 @@ function App() {
             }
           />
           <Route path='/Cart' element={<Cart />} />
+          
           {user ? (
             <>
               <Route path='/admin/blog' element={<AdminBlogManagement />} />
