@@ -130,7 +130,7 @@ Les besoins non fonctionnels comprennent la multilinguisme, la géolocalisation,
 \section{Diagramme de cas d'utilisation globale}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.54\textwidth]{use_case_diagram.png}
+    \includegraphics[width=0.5\textwidth]{use_case_diagram.png}
     \caption{UML}
 \end{figure}
 \begin{figure}[H]
@@ -273,7 +273,7 @@ Ce chapitre se concentre sur le premier sprint du projet EasyShop Tej Chasse. Il
 \subsection{Diagramme de cas d'utilisation}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{sprint_1_uc.png}
+    \includegraphics[width=0.5\textwidth]{sprint_1_uc.png}
     \caption{Diagramme de cas d'utilisation raffiné pour le Sprint 1}
 \end{figure}
 
@@ -304,7 +304,7 @@ Ce chapitre se concentre sur le premier sprint du projet EasyShop Tej Chasse. Il
 \subsection{Diagramme de séquence}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{sprint_1_sequence.png}
+    \includegraphics[width=0.3\textwidth]{sprint_1_sequence.png}
     \caption{Diagramme de séquence pour le cas d'utilisation User Authentication}
 \end{figure}
 
@@ -415,7 +415,7 @@ Dans ce sprint, nous nous concentrons sur l'intégration du support multilingue 
 \subsection{Digramme de Classe}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{sprint_2_class.png}
+    \includegraphics[width=0.4\textwidth]{sprint_2_class.png}
     \caption{Diagramme de Classe du Sprint 2 (Conception)}
 \end{figure}
 
@@ -474,7 +474,7 @@ Dans ce sprint, notre objectif est d'intégrer la fonction de géolocalisation e
 \subsection{Diagramme de Cas d'Utilisation}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{sprint_3_uc.png}
+    \includegraphics[width=0.57\textwidth]{sprint_3_uc.png}
     \caption{Diagramme de Cas d'Utilisation du Sprint 3}
 \end{figure}
 
@@ -517,7 +517,7 @@ Dans ce sprint, notre objectif est d'intégrer la fonction de géolocalisation e
 \subsection{Digramme de Classe}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{sprint_3_class.png}
+    \includegraphics[width=0.5\textwidth]{sprint_3_class.png}
     \caption{Diagramme de Classe du Sprint 3 (Conception)}
 \end{figure}
 
@@ -563,27 +563,45 @@ Nous avons principalement utilisé nos ordinateurs portables pour le développem
 
 \subsubsection{Environnement logiciel}
 Notre environnement logiciel comprenait :
+\\
 - Visual Studio Code (VSCode) comme environnement de développement intégré (IDE) principal.
+\\
 - React.js pour le développement front-end, utilisant divers modules tels que PayPal et Email.js, entre autres.
+\\
 - Node.js pour le script côté serveur et le développement back-end.
+\\
 - Firebase pour l'infrastructure et les services sans serveur.
+
 
 \subsubsection{Technologies adoptées}
 Tout au long du projet, nous avons adopté plusieurs technologies clés :
+\\
 - React.js pour la construction d'interfaces utilisateur dynamiques.
+\\
 - Node.js pour le scripting côté serveur et le développement back-end.
+\\
 - Firebase pour le développement basé sur le cloud et les services.
+\\
 - API PayPal pour l'intégration de paiements électroniques sécurisés.
+\\
 - Email.js pour l'envoi d'e-mails de confirmation.
 
+
 \subsection{Difficultés Rencontrées}
-Le processus de développement n'a pas été sans défis. Certaines des difficultés rencontrées incluent :
+Le processus de développement n'a pas été sans défis. Certaines des difficultés rencontrées incluent : 
+\\
 - GitHub ne sauvegardant pas l'ensemble du travail effectué, nécessitant des téléchargements manuels.
+\\
 - Firebase ne fonctionnant pas comme prévu, nécessitant des dépannages supplémentaires.
+\\
 - Des difficultés à lier divers composants de notre travail de manière transparente.
+\\
 - Des problèmes avec l'intégration du système de paiement PayPal.
+\\
 - Des difficultés rencontrées lors de l'utilisation d'un serveur Node pour l'envoi d'e-mails.
+\\
 - Des problèmes liés à Firestore dans la gestion des blogs et des produits.
+
 
 Ces défis ont fourni des expériences d'apprentissage précieuses et des opportunités de résolution de problèmes.
 
